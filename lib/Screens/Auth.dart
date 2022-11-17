@@ -1,5 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test/Screens/signUP.dart';
 
 class Auth extends StatefulWidget {
   const Auth({Key? key}) : super(key: key);
@@ -69,7 +73,7 @@ class _AuthState extends State<Auth> {
           Container(
             padding: EdgeInsets.only(left: 65, right: 65, bottom: 20, top: 20),
             margin: EdgeInsets.only(left: w*0.05),
-            child: Text("S'inscrire",
+            child: Text("Se Connecter",
                 style: GoogleFonts.abel(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
@@ -84,11 +88,13 @@ class _AuthState extends State<Auth> {
       child: RichText(
       text: TextSpan(
       text: "Vous n’avez pas un compte ? ",
-      style: TextStyle(fontSize: 20, color: Colors.black),
+      style: TextStyle(fontSize: 15, color: Colors.black),
         children: [
           TextSpan(
           text: "s’inscrire",
-          style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w700)),
+          style: TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.w700),
+    recognizer: TapGestureRecognizer()..onTap=()=>{
+    Get.to(()=>SignUp())}),
         ]
       )),
     ),

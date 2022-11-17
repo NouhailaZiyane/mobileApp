@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test/Screens/signUP.dart';
+
+import 'Auth.dart';
 
 class Accueil extends StatefulWidget {
   const Accueil({Key? key}) : super(key: key);
@@ -48,10 +51,14 @@ class _AccueilState extends State<Accueil> {
           ),
           Container(
             padding: EdgeInsets.only(left: 50, right: 50, bottom: 20, top: 20),
-            child: Text("Se Connecter",
-                style: GoogleFonts.abel(color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                fontSize: 20)),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Auth(),));
+              } ,
+              child:Text("Se Connecter",
+                  style: GoogleFonts.abel(color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 20)) ,),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.green,
@@ -59,10 +66,15 @@ class _AccueilState extends State<Accueil> {
           ),SizedBox(height:h*0.03),
           Container(
             padding: EdgeInsets.only(left: 65, right: 65, bottom: 20, top: 20),
-            child: Text("S'inscrire",
+            child:GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> SignUp(),));
+              },
+              child:Text("S'inscrire",
                 style: GoogleFonts.abel(color: Colors.white,
                     fontWeight: FontWeight.w900,
                     fontSize: 20)),
+            ) ,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.green,

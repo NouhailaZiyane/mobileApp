@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import 'Screens/Accueil.dart';
 import 'Screens/Auth.dart';
+import 'Screens/listeServ.dart';
+import 'Screens/signUP.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,11 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-      home: Auth());
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+      home: ListeServices());
   }
 }
