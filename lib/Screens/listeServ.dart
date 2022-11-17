@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:footer/footer.dart';
+import 'package:footer/footer_view.dart';
 
 class ListeServices extends StatefulWidget {
   const ListeServices({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class _ListeServicesState extends State<ListeServices> {
         children: [
           Image.asset("images/lg.png", width: 70,),
           Text(
-            "Choisissez une catégorie",
+            " Choisissez une catégorie",
             style: GoogleFonts.adventPro(
                 fontSize: 30, fontWeight: FontWeight.w700),
           )
@@ -109,7 +111,26 @@ class _ListeServicesState extends State<ListeServices> {
                   ),
                 ),
          ] ),
-          )],
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(icon: new Icon(Icons.home_filled),
+              label: "Home"
+          ), BottomNavigationBarItem(icon: new Icon(Icons.message),
+              label: "Messagerie"
+          ),
+          BottomNavigationBarItem(icon: new Icon(Icons.settings),
+              label: "Paramètres"
+          ),
+          BottomNavigationBarItem(icon: new Icon(Icons.person),
+              label: "Mon Compte"
+          ),
+
+        ],
       ),
     );
   }
