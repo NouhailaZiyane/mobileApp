@@ -14,6 +14,7 @@ class _AuthState extends State<Auth> {
     final w = MediaQuery.of(context).size.width;
     final h = MediaQuery.of(context).size.height;
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           Container(
@@ -58,7 +59,7 @@ class _AuthState extends State<Auth> {
             width: w * 0.85,
             child: TextFormField(
               decoration: const InputDecoration(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.password),
                 hintText: 'Entrez votre Mot de passe ',
                 labelText: 'Mot de passe *',
               ),
@@ -91,7 +92,6 @@ class _AuthState extends State<Auth> {
         ]
       )),
     ),
-
         ],
       ),
     );
