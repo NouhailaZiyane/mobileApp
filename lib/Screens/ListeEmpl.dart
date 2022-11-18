@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test/Screens/ProfilePage.dart';
 import 'package:test/Screens/signUP.dart';
 
 import 'Accueil.dart';
@@ -158,7 +159,7 @@ class _ListeEmpState extends State<ListeEmp> {
         Navigator.push(
             context, // HERE You need context
             MaterialPageRoute(
-              builder: (context) => Auth(),
+              builder: (context) => ProfilePage(),
             ));
         break;
     }
