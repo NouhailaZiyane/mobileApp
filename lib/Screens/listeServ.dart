@@ -7,7 +7,7 @@ import 'package:test/Screens/signUP.dart';
 
 import 'Accueil.dart';
 import 'Auth.dart';
-import 'ProfilePage.dart';
+import 'Parametres.dart';
 
 class ListeServices extends StatefulWidget {
   const ListeServices({Key? key}) : super(key: key);
@@ -232,14 +232,14 @@ class _ListeServicesState extends State<ListeServices> {
         Navigator.push(
             context, // HERE You need context
             MaterialPageRoute(
-              builder: (context) => SignUp(),
+              builder: (context) => Parametres(),
             ));
         break;
       case 3:
         Navigator.push(
             context, // HERE You need context
             MaterialPageRoute(
-              builder: (context) => ProfilePage(),
+              builder: (context) => Parametres(),
             ));
         break;
 

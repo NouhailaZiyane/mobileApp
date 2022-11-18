@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:test/Screens/ProfilePage.dart';
+import 'package:test/Screens/Parametres.dart';
 import 'package:test/Screens/signUP.dart';
 
 import 'Accueil.dart';
@@ -91,8 +91,6 @@ class _ListeEmpState extends State<ListeEmp> {
                         ),
                         SizedBox(
                           height: h * 0.05,
-                        ),
-                        SizedBox(
                           width: w * 0.19,
                         ),
                         Image.asset(
@@ -152,14 +150,14 @@ class _ListeEmpState extends State<ListeEmp> {
         Navigator.push(
             context, // HERE You need context
             MaterialPageRoute(
-              builder: (context) => SignUp(),
+              builder: (context) => Parametres(),
             ));
         break;
       case 3:
         Navigator.push(
             context, // HERE You need context
             MaterialPageRoute(
-              builder: (context) => ProfilePage(),
+              builder: (context) => Parametres(),
             ));
         break;
     }
