@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:test/Screens/profil.dart';
 import 'package:test/Screens/signUP.dart';
 
 import 'Accueil.dart';
 import 'ListeEmpl.dart';
+import 'Parametres.dart';
 
-class Parametres extends StatefulWidget {
-  const Parametres({Key? key}) : super(key: key);
+class Profil extends StatefulWidget {
+  const Profil({Key? key}) : super(key: key);
 
   @override
-  State<Parametres> createState() => _ParametresState();
+  State<Profil> createState() => _ProfilState();
 }
 
-class _ParametresState extends State<Parametres> {
+class _ProfilState extends State<Profil> {
   @override
   Widget build(BuildContext context) {
-    int index = 2;
+    int index = 3;
     final w = MediaQuery.of(context).size.width;
     final h = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -50,7 +50,6 @@ class _ParametresState extends State<Parametres> {
                 child: ListView(
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
-                    physics: BouncingScrollPhysics(),
                     padding: const EdgeInsets.all(2),
                     children: <Widget>[
                   SizedBox(
@@ -82,14 +81,14 @@ class _ParametresState extends State<Parametres> {
                               width: 0.02 * w,
                             ),
                             Icon(
-                              Icons.account_circle,
+                              Icons.location_city,
                               size: 50,
                             ),
                             Flexible(
                               child: Column(
                                 children: [
                                   Text(
-                                    " Modifier les informations du compte",
+                                    " Ville",
                                     style: GoogleFonts.acme(
                                         fontSize: 20,
                                         color: Colors.lightBlueAccent),
@@ -119,14 +118,14 @@ class _ParametresState extends State<Parametres> {
                               width: 0.02 * w,
                             ),
                             Icon(
-                              Icons.delete,
+                              Icons.onetwothree,
                               size: 50,
                             ),
                             Flexible(
                               child: Column(
                                 children: [
                                   Text(
-                                    " Supprimer votre compte",
+                                    " Tél:",
                                     style: GoogleFonts.acme(
                                         fontSize: 20,
                                         color: Colors.lightBlueAccent),
@@ -156,14 +155,14 @@ class _ParametresState extends State<Parametres> {
                               width: 0.02 * w,
                             ),
                             Icon(
-                              Icons.logout,
+                              Icons.email,
                               size: 50,
                             ),
                             Flexible(
                               child: Column(
                                 children: [
                                   Text(
-                                    " Se déconnecter",
+                                    " Email: ",
                                     style: GoogleFonts.acme(
                                         fontSize: 20,
                                         color: Colors.lightBlueAccent),
@@ -193,14 +192,14 @@ class _ParametresState extends State<Parametres> {
                               width: 0.02 * w,
                             ),
                             Icon(
-                              Icons.switch_account,
+                              Icons.output,
                               size: 50,
                             ),
                             Flexible(
                               child: Column(
                                 children: [
                                   Text(
-                                    " Switcher vers le  profil client",
+                                    " Autre",
                                     style: GoogleFonts.acme(
                                         fontSize: 20,
                                         color: Colors.lightBlueAccent),
@@ -214,41 +213,8 @@ class _ParametresState extends State<Parametres> {
                     ),
                   )
                 ]))
-          ],),
+          ],
+        ),
     );
-  }
-
-  void switchIndex(int index) {
-    switch (index) {
-      case 0:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => ListeEmp(),
-            ));
-        break;
-
-      case 1:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Accueil(),
-            ));
-        break;
-      case 2:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Parametres(),
-            ));
-        break;
-      case 3:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Profil(),
-            ));
-        break;
-    }
   }
 }

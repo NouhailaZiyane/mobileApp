@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:footer/footer.dart';
 import 'package:footer/footer_view.dart';
 import 'package:test/Screens/ListeEmpl.dart';
+import 'package:test/Screens/profil.dart';
 import 'package:test/Screens/signUP.dart';
 
 import 'Accueil.dart';
@@ -29,9 +30,7 @@ class _ListeServicesState extends State<ListeServices> {
       appBar: AppBar(
         backgroundColor: Colors.lightBlueAccent,
       ),
-      body: new IndexedStack(
-        index: index,
-        children: <Widget>[
+      body:
           Column(
             children: [
               SizedBox(
@@ -184,65 +183,6 @@ class _ListeServicesState extends State<ListeServices> {
               ),
             ],
           ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        onTap: (int newIndex) {
-          setState(() {
-            index = newIndex;
-            switchIndex(index);
-            });
-        },
-        backgroundColor: Colors.white,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.home_filled),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-              icon: new Icon(Icons.message), label: "Messagerie"),
-          BottomNavigationBarItem(
-              icon: new Icon(Icons.settings), label: "Paramètres"),
-          BottomNavigationBarItem(
-              icon: new Icon(Icons.person), label: "Mon Compte"),
-        ],
-      ),
     );
-  }
-  void switchIndex(int index){
-    switch (index) {
-      case 0:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => ListeEmp(),
-            ));
-        break;
-
-      case 1:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Accueil(),
-            ));
-        break;
-      case 2:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Parametres(),
-            ));
-        break;
-      case 3:
-        Navigator.push(
-            context, // HERE You need context
-            MaterialPageRoute(
-              builder: (context) => Parametres(),
-            ));
-        break;
-
-    }
   }
 }
