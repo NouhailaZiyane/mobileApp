@@ -36,9 +36,6 @@ class _AccueilState extends State<Accueil> {
             Text("Rendez votre vie quotidienne plus facile",
                 style: GoogleFonts.aBeeZee(color: Colors.grey, fontSize: 20)),
           ]),
-          SizedBox(
-            height: h * 0.12,
-          ),
           Container(
             width: w * 0.8,
             height: h * 0.4,

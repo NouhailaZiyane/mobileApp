@@ -42,8 +42,8 @@ class _SignUpState extends State<SignUp> {
           Container(
             margin: EdgeInsets.only(left: 0.08 * w),
             width: 0.3 * w,
-            height: 0.3 * h,
-            decoration: BoxDecoration(
+            height: 0.2 * h,
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage("images/free-user-icon-295-thumb.png"),
             )),
